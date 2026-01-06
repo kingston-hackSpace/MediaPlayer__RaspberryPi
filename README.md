@@ -98,21 +98,28 @@ Avoid:
 ----
 # Media Player options
 
-- FULLSCREEN :
+EXAMPLE:
 
-  ```
-  vlc --fullscreen /home/hackspace/Desktop/videos/myvideo.mov
-  ```
+```
+vlc --fullscreen --loop /home/hackspace/Desktop/videos/myvideo.mov
+```
 
-- LOOP :
+- FULLSCREEN : --fullscreen
 
-  ```
-  vlc --loop /home/hackspace/Desktop/videos/myvideo.mov
-  ```
+- LOOP : --loop 
 
-- FULLSCREEN + LOOP :
+- PLAY AND EXIT : --play-and-exit
 
-  ```
-  vlc --fullscreen /home/hackspace/Desktop/videos/myvideo.mov
-  ```
+- NO AUDIO : --no-audio
+
+- ASPECT RATIO : --aspect-ratio=16:9
+
+- HIDE MOUSE : --mouse-hide-timeout=0
+
+
+To see more options, explore:
+ 
+ ```
+ vlc --help
+ ```
 
