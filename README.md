@@ -1,5 +1,5 @@
 # MediaPlayer__RaspberryPi
-Run a video on start-up on a Raspberry pi and a HDMI screen (high resolution) / LCD TFT Display (low resolution).
+Run a video on start-up on a Raspberry pi. Use a HDMI screen (high resolution) / LCD TFT Display (low resolution).
 
 ----
 ## Set up your Raspberry Pi from scratch
@@ -71,7 +71,7 @@ Recommended (via HDMI):
 - Test the video using VLC:
 
   ```
-  vlc /home/hackspace/Desktop/videos/myvideo.mov
+  vlc /home/hackspace/Desktop/videos/myvideo.mp4
   ```
 
 - Check that the video runs properly:
@@ -90,7 +90,7 @@ Recommended (via HDMI):
 EXAMPLE:
 
 ```
-vlc --fullscreen --loop /home/hackspace/Desktop/videos/myvideo.mov
+vlc --fullscreen --loop /home/hackspace/Desktop/videos/myvideo.mp4
 ```
 
 - FULLSCREEN : --fullscreen
@@ -115,4 +115,68 @@ To see more options, explore:
 ----
 ## Run video at Start-up
 
-PENDING
+- Create a startup script:
+
+  ```
+  nano /home/hackspace/Desktop/videos/playvideo.sh
+
+  ```
+
+- Inside the file, type:
+
+```
+#!/bin/bash
+
+export DISPLAY=:0
+
+xset s off
+xset -dpms
+xset s noblank
+
+sleep 10
+cvlc --fullscreen --loop --no-video-title-show /home/hackspace/Desktop/videos/myvideo.mp4
+```
+
+- To save and exit:
+  
+  - Save -> CTRL + X, then Y, then Enter
+ 
+- Make your file executable (permission to run the .sh script):
+
+  ```
+  chmod +x /home/hackspace/Desktop/videos/playvideo.sh
+  ```
+
+- Test .sh file
+
+  ```
+  /home/hackspace/Desktop/videos/playvideo.sh
+  ```
+
+- What should happen:
+
+  - After ~10 seconds, VLC opens
+
+  - The video plays fullscreen
+
+  - It loops
+ 
+- Add the script to startup
+
+  ```
+  nano /home/hackspace/.config/autostart/playvideo.desktop
+  ```
+
+- A new file will open. Play video and prevent the screen to turn off or going blank:
+
+```
+[Desktop Entry]
+Type=Application
+Name=Play Startup Video
+Exec=/home/hackspace/Desktop/videos/playvideo.sh
+X-GNOME-Autostart-enabled=true
+```
+
+- Save and exit.
+  
+  
