@@ -1,28 +1,26 @@
 # MediaPlayer__RaspberryPi
-Run a video on start-up on a raspberry pi and screen
+Run a video on start-up on a Raspberry pi and HDMI Screen
 
 ----
-# Set up your Raspberry Pi from scratch
+## Set up your Raspberry Pi from scratch
 
-If you have a brand new Raspberry Pi, you will need to start installing the Operating System (OS) and initial setting. Follow [this tutorial](https://github.com/kingston-hackSpace/RaspberryPi/blob/main/How_To_SetUp_Your_RPi_From_Scratch.md)
+If you have a brand new Raspberry Pi, you will need to start installing the Operating System (OS). 
 
-If your Rpi already has its OS install, please skip this step. 
+If your Rpi already has its OS installed, *please skip this step.* 
 
-----
-# A SCREEN FOR THE RPI
-
-There are different screen options for your Rpi, depending on your project goals. 
-
-- Any screen via HDMI, see settings here
- 
-- Embedded touch screen 7', see settings here
-
-- Embedded touch screen (small)
-
-- Micro OLED screen
+[Tutorial: RPi set-up from scratch](https://github.com/kingston-hackSpace/RaspberryPi/blob/main/How_To_SetUp_Your_RPi_From_Scratch.md)
 
 ----
-# Video formats
+## A SCREEN FOR THE RPI
+
+There are different screen options for your Rpi.
+
+Read more [here](https://github.com/kingston-hackSpace/Display__RaspberryPi/tree/main)
+
+----
+# TUTORIAL FOR HDMI Display and RPi
+----
+## Video formats
 
 Compatible video formats:
 
@@ -53,11 +51,11 @@ Avoid:
   - MPEG-2
     
 ----
-# INSTALL VLC software
+## INSTALL VLC software
 
 - Turn on your Rpi
 
-- Your Rpi must be connected to Ethernet or WIFI ()
+- Your Rpi must be connected to Ethernet or WIFI (Eduroam might not work).
 
 - On the Desktop, create a folder called *videos*
 
@@ -71,7 +69,7 @@ Avoid:
   ```
 
 ----
-# TEST your video on the RPi
+## TEST your video on the RPi
 
 - Check that the video file exists:
 
@@ -96,7 +94,7 @@ Avoid:
     - Full screen works (press F)
 
 ----
-# Media Player options
+## Media Player options
 
 EXAMPLE:
 
@@ -123,3 +121,7 @@ To see more options, explore:
  vlc --help
  ```
 
+----
+## Run video at Start-up
+
+PENDING
