@@ -44,6 +44,8 @@ Recommended (via HDMI):
 ----
 ## INSTALL VLC software
 
+*Note: If VLC is already installed, you can skip this step*
+
 - Turn on your Rpi
 
 - Your Rpi must be connected to Ethernet or WIFI (Eduroam might not work).
@@ -177,3 +179,5 @@ X-GNOME-Autostart-enabled=true
 - Save and exit: CTRL + X, then Y, then Enter
   
 - Reboot to test
+
+- Your video should utomatically run after reboot. 
