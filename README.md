@@ -19,18 +19,17 @@ Read more [here](https://github.com/kingston-hackSpace/Display__RaspberryPi/tree
 
 ----
 # TUTORIAL
+
+Run a video on start-up on a Raspberry pi using a screen with HDMI ports (for high resolution) or a LCD TFT Display (low resolution).
+
 ----
 ## Video formats
 
-Compatible video formats:
+Compatible video formats: .mp4 / .mov / .mkv
 
-  - .mp4
+Avoid: 4K videos, 60 fps videos, MPEG-2
 
-  - .mov
-
-  - .mkv
-
-Recommended:
+Recommended (via HDMI):
 
   - .mp4
 
@@ -41,23 +40,6 @@ Recommended:
   - Resolution: up to 1920×1080
 
   - Frame rate: 24–30 fps
-
-Avoid:
-
-  - 4K videos
-
-  - 60 fps videos
-
-  - MPEG-2
-
-----
-## Wiring
-
-HDMI Screen : Connect your Screen and RPi via HDMI
-
-GPIO LCD TFT Display : Wiring will depend on your screen model. 
-
-RIBBON LCD TFT Display : Wiring will depend on your screen model. 
 
 ----
 ## INSTALL VLC software
