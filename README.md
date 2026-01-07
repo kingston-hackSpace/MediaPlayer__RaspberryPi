@@ -64,15 +64,15 @@ Recommended (via HDMI):
 
 - Check that the video file exists:
 
-  ```
-  ls /home/hackspace/Desktop/videos
-  ```
+```
+ls /home/hackspace/Desktop/videos
+```
 
 - Test the video using VLC:
 
-  ```
-  vlc /home/hackspace/Desktop/videos/myvideo.mp4
-  ```
+```
+vlc /home/hackspace/Desktop/videos/myvideo.mp4
+```
 
 - Check that the video runs properly:
 
@@ -108,19 +108,18 @@ vlc --fullscreen --loop /home/hackspace/Desktop/videos/myvideo.mp4
 
 To see more options, explore:
  
- ```
- vlc --help
- ```
+```
+vlc --help
+```
 
 ----
 ## Run video at Start-up
 
 - Create a startup script:
 
-  ```
-  nano /home/hackspace/Desktop/videos/playvideo.sh
-
-  ```
+```
+nano /home/hackspace/Desktop/videos/playvideo.sh
+```
 
 - Inside the file, type:
 
@@ -137,21 +136,19 @@ sleep 10
 cvlc --fullscreen --loop --no-video-title-show /home/hackspace/Desktop/videos/myvideo.mp4
 ```
 
-- To save and exit:
-  
-  - Save -> CTRL + X, then Y, then Enter
+- To save and exit: CTRL + X, then Y, then Enter
  
 - Make your file executable (permission to run the .sh script):
 
-  ```
-  chmod +x /home/hackspace/Desktop/videos/playvideo.sh
-  ```
+```
+chmod +x /home/hackspace/Desktop/videos/playvideo.sh
+```
 
 - Test .sh file
 
-  ```
-  /home/hackspace/Desktop/videos/playvideo.sh
-  ```
+```
+/home/hackspace/Desktop/videos/playvideo.sh
+```
 
 - What should happen:
 
@@ -163,11 +160,11 @@ cvlc --fullscreen --loop --no-video-title-show /home/hackspace/Desktop/videos/my
  
 - Add the script to startup
 
-  ```
-  nano /home/hackspace/.config/autostart/playvideo.desktop
-  ```
+```
+nano /home/hackspace/.config/autostart/playvideo.desktop
+```
 
-- A new file will open. Play video and prevent the screen to turn off or going blank:
+- A new file will open. Add the following to play video at startup:
 
 ```
 [Desktop Entry]
@@ -177,6 +174,6 @@ Exec=/home/hackspace/Desktop/videos/playvideo.sh
 X-GNOME-Autostart-enabled=true
 ```
 
-- Save and exit.
+- Save and exit: CTRL + X, then Y, then Enter
   
-  
+- Reboot to test
