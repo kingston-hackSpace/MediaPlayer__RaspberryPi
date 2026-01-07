@@ -1,5 +1,5 @@
 # MediaPlayer__RaspberryPi
-Run a video on start-up on a Raspberry pi and HDMI Screen
+Run a video on start-up on a Raspberry pi and a HDMI screen (high resolution) / LCD TFT Display (low resolution).
 
 ----
 ## Set up your Raspberry Pi from scratch
@@ -18,7 +18,7 @@ There are different screen options for your Rpi.
 Read more [here](https://github.com/kingston-hackSpace/Display__RaspberryPi/tree/main)
 
 ----
-# TUTORIAL FOR HDMI Display and RPi
+# TUTORIAL
 ----
 ## Video formats
 
@@ -49,7 +49,16 @@ Avoid:
   - 60 fps videos
 
   - MPEG-2
-    
+
+----
+## Wiring
+
+HDMI Screen : Connect your Screen and RPi via HDMI
+
+GPIO LCD TFT Display : Wiring will depend on your screen model. 
+
+RIBBON LCD TFT Display : Wiring will depend on your screen model. 
+
 ----
 ## INSTALL VLC software
 
