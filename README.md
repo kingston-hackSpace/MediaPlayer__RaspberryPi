@@ -127,7 +127,7 @@ vlc --help
 ----
 ## Build your script to play-video/run-at-startup/shutdown-after-6hours
 
-- Create a the script:
+- Create the script:
 
 ```
 nano /home/hackspace/Desktop/videos/playvideo.sh
@@ -164,12 +164,12 @@ cvlc --fullscreen --loop --no-video-title-show /home/hackspace/Desktop/videos/my
 
 - The previous script performs:
 
-    - Play video at fullcreen and looping
+    - Play video at fullscreen and looping
  
     - Disable any screen saver, preventing the screen going to blank
  
     - Shutdown the RPi after 6 hrs of video running
- 
+
 - Now, make your file executable (permission to run the .sh script):
 
 ```
@@ -190,7 +190,16 @@ chmod +x /home/hackspace/Desktop/videos/playvideo.sh
 
   - It loops
  
-- Add the script to startup
+----
+## Enable auto-start
+
+- Check that the RPi has an autostart directory, if not, create it:
+
+```
+mkdir -p /home/hackspace/.config/autostart
+```
+
+- Create a autostart script linked to the playvideo script:
 
 ```
 nano /home/hackspace/.config/autostart/playvideo.desktop
@@ -212,6 +221,9 @@ X-GNOME-Autostart-enabled=true
 
 - Your video should automatically run after reboot.
 
+----
+## Enable auto-shutdown
+
 - Allow shutdown without password:
 
 ```
@@ -226,17 +238,17 @@ hackspace ALL=(ALL) NOPASSWD: /sbin/shutdown
 
 - Save and exit: CTRL + X, then Y, then Enter
 
-- The RPi should now shutdown after 6hrs playing the video. However, if you want to turn the RPi on again (for example, for an everyday display exhibition), you will need to do this manually. This can be:
+- The RPi should now shutdown after 6hrs on. However, if you want to turn the RPi on again (for example, for an everyday display exhibition), you will need to do this manually. This can be:
 
     - Manually unplug and replugg the RPi
  
-    - Power your Rpi through a *timer plug* (Reference image [here](https://github.com/kingston-hackSpace/MediaPlayer__RaspberryPi/blob/main/timer%20plug.jpg))
+    - Power your Rpi through a *timer plug* (Reference image [here](https://github.com/kingston-hackSpace/MediaPlayer__RaspberryPi/blob/main/timer%20plug.jpg)). Ensure the timer plug cuts power at least 15–30 minutes after the Raspberry Pi shuts down.
 
 
 ----
 ## Why to shutdown (before unplugging!)
 
-A SAFETY SHUTDOWN WILL PREVENT SOFTWARE DAMAGE:
+⚠️ *Always shut down the Pi with shutdown before power is removed, otherwise the SD card can become corrupted.*
 
 The Raspberry Pi runs its operating system from an SD card. While the Pi is powered on, it is constantly writing small amounts of data to this card.
 
