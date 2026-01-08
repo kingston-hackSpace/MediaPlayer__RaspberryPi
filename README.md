@@ -11,7 +11,7 @@ If your Rpi already has its OS installed, *please skip this step.*
 [Tutorial: RPi set-up from scratch](https://github.com/kingston-hackSpace/RaspberryPi/blob/main/How_To_SetUp_Your_RPi_From_Scratch.md)
 
 ----
-## A SCREEN FOR THE RPI
+## A screen for the RPi
 
 There are different screen options for your Rpi.
 
@@ -125,9 +125,9 @@ vlc --help
 ```
 
 ----
-## Run video at Start-up
+## Build your script to play-video/run-at-startup/shutdown-after-6hours
 
-- Create a startup script:
+- Create a the script:
 
 ```
 nano /home/hackspace/Desktop/videos/playvideo.sh
@@ -232,4 +232,15 @@ hackspace ALL=(ALL) NOPASSWD: /sbin/shutdown
  
     - Power your Rpi through a *timer plug* (Reference image [here](https://github.com/kingston-hackSpace/MediaPlayer__RaspberryPi/blob/main/timer%20plug.jpg))
 
+
+----
+## Why to shutdown (before unplugging!)
+
+A SAFETY SHUTDOWN WILL PREVENT SOFTWARE DAMAGE:
+
+The Raspberry Pi runs its operating system from an SD card. While the Pi is powered on, it is constantly writing small amounts of data to this card.
+
+If power is unplugged without shutting down, files can be left half-written, which may corrupt the SD card. This can cause the Raspberry Pi to fail to boot or behave unpredictably later.
+
+Always shut down the Raspberry Pi before unplugging power. 
   
