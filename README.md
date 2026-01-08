@@ -230,6 +230,6 @@ hackspace ALL=(ALL) NOPASSWD: /sbin/shutdown
 
     - Manually unplug and replugg the RPi
  
-    - Power your Rpi through a *timer plug* (Reference image [here])
+    - Power your Rpi through a *timer plug* (Reference image [here](https://github.com/kingston-hackSpace/MediaPlayer__RaspberryPi/blob/main/timer%20plug.jpg))
 
   
