@@ -238,11 +238,11 @@ hackspace ALL=(ALL) NOPASSWD: /sbin/shutdown
 
 - Save and exit: CTRL + X, then Y, then Enter
 
-- The RPi should now shutdown after 6hrs on. However, if you want to turn the RPi on again (for example, for an everyday display exhibition), you will need to do this manually. This can be:
+- The RPi should automatically shutdown after 6hrs of playing your video. However, if you want to turn the RPi on again (for example, for an everyday display exhibition), you will need to unplug the RPi manually. This can be:
 
     - Manually unplug and replugg the RPi
  
-    - Power your Rpi through a *timer plug* (Reference image [here](https://github.com/kingston-hackSpace/MediaPlayer__RaspberryPi/blob/main/timer%20plug.jpg)). Ensure the timer plug cuts power at least 15–30 minutes after the Raspberry Pi shuts down.
+    - Power your Rpi through a *timer plug* (Reference image [here](https://github.com/kingston-hackSpace/MediaPlayer__RaspberryPi/blob/main/timer%20plug.jpg)). Ensure the timer-plug cuts power at least 15–30 minutes after the Raspberry Pi shuts down.
 
 
 ----
