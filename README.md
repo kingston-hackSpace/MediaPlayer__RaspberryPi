@@ -226,4 +226,10 @@ hackspace ALL=(ALL) NOPASSWD: /sbin/shutdown
 
 - Save and exit: CTRL + X, then Y, then Enter
 
+- The RPi should now shutdown after 6hrs playing the video. However, if you want to turn the RPi on again (for example, for an everyday display exhibition), you will need to do this manually. This can be:
+
+    - Manually unplug and replugg the RPi
+ 
+    - Power your Rpi through a *timer plug* (Reference image [here])
+
   
