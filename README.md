@@ -64,6 +64,16 @@ Recommended (via HDMI):
 ----
 ## TEST your video on the RPi
 
+- Turn on your RPi
+
+- At Desktop, create a folder called *videos*
+
+- Copy your video inside this folder
+
+- Rename your video as *myvideo.mp4 / myvideo.mov* (depending on your video format)
+
+- Open the terminal
+  
 - Check that the video file exists:
 
 ```
@@ -180,4 +190,4 @@ X-GNOME-Autostart-enabled=true
   
 - Reboot to test
 
-- Your video should utomatically run after reboot. 
+- Your video should automatically run after reboot. 
