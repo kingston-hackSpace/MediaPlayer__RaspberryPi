@@ -138,19 +138,39 @@ nano /home/hackspace/Desktop/videos/playvideo.sh
 ```
 #!/bin/bash
 
+# Tell X commands which display to use
 export DISPLAY=:0
 
+# Prevent screen blanking
 xset s off
 xset -dpms
 xset s noblank
 
+# Start shutdown timer in the background (6 hours = 21600 seconds)
+(
+  sleep 21600
+  sudo shutdown -h now
+) &
+
+
+# Give the desktop time to settle
 sleep 10
+
+# Play the video
 cvlc --fullscreen --loop --no-video-title-show /home/hackspace/Desktop/videos/myvideo.mp4
 ```
 
 - To save and exit: CTRL + X, then Y, then Enter
+
+- The previous script performs:
+
+    - Play video at fullcreen and looping
  
-- Make your file executable (permission to run the .sh script):
+    - Disable any screen saver, preventing the screen going to blank
+ 
+    - Shutdown the RPi after 6 hrs of video running
+ 
+- Now, make your file executable (permission to run the .sh script):
 
 ```
 chmod +x /home/hackspace/Desktop/videos/playvideo.sh
@@ -190,4 +210,20 @@ X-GNOME-Autostart-enabled=true
   
 - Reboot to test
 
-- Your video should automatically run after reboot. 
+- Your video should automatically run after reboot.
+
+- Allow shutdown without password:
+
+```
+sudo nano /etc/sudoers.d/autoshutdown
+```
+
+- Add:
+
+```
+hackspace ALL=(ALL) NOPASSWD: /sbin/shutdown
+```
+
+- Save and exit: CTRL + X, then Y, then Enter
+
+  
